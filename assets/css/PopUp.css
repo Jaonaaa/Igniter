@@ -1,0 +1,65 @@
+.popUp-box {
+  position: fixed;
+  right: 2rem;
+  top: 6rem;
+  transform: translateX(110%);
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  transition: all 0.45s ease-in-out;
+  border-radius: 0.1rem;
+  box-shadow: 0px 0px 0.5rem -0.2rem rgba(245, 245, 245, 0.703);
+}
+.status-popUp {
+  display: flex;
+  padding: 0.8rem 1rem;
+  justify-content: space-between;
+  align-self: center;
+
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 1.35rem;
+}
+.content-popUp {
+  width: 15rem;
+  display: flex;
+  padding: 0.9rem 0.5rem 0.9rem 0rem;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 0.85rem;
+}
+
+.errorColor {
+  color: rgb(244, 50, 89);
+}
+.errorBg {
+  background-color: rgb(250, 203, 203);
+}
+.succesColor {
+  color: rgb(21, 135, 30);
+}
+.succesBg {
+  background-color: rgb(195, 255, 195);
+}
+
+#img-product-popUp {
+  width: 16rem;
+  height: 100%;
+  min-height: 23rem;
+}
+/* ////MIDDLE POP-UP/// */
+
+#middle-popUp {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 0.2rem;
+  background-color: white;
+  width: auto;
+  box-sizing: border-box;
+  padding: 1.3rem 1.3rem 1rem 1.3rem;
+  height: auto;
+  z-index: 4;
+}
