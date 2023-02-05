@@ -1,0 +1,8 @@
+
+-- database test
+CREATE TABLE IF NOT EXISTS user (
+    id INTEGER PRIMARY KEY AUTOINCREMENT ,
+    username VARCHAR(255) NOT NULL ,
+    email VARCHAR(255) NOT NULL ,
+    password VARCHAR(255) NOT NULL 
+)

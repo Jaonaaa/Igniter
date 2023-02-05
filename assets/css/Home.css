@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#logo-page {
+  width: 9rem;
+  display: flex;
+  pointer-events: all;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 4rem;
+  overflow: hidden;
+  right: 5%;
+  z-index: 4;
+  top: 1.5rem;
+}
+
+#logo-page img {
+  width: 9.5rem;
+  top: -80%;
+  pointer-events: all;
+  cursor: pointer;
+  position: absolute;
+  height: 10rem;
+}

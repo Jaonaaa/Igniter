@@ -25,7 +25,12 @@ function createSidePopUp(content, status) {
   container.innerHTML = content;
   popUp.appendChild(icon);
   popUp.appendChild(container);
-  let topOffset = 6;
+  console.log(window.innerWidth);
+
+  let topOffset = 4;
+  if (window.innerWidth < 765) {
+    topOffset = 3.5;
+  }
   if (getNumberOfSidePopUp() != 0) {
     topOffset = topOffset * (getNumberOfSidePopUp() + 1);
   }

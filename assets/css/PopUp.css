@@ -30,6 +30,20 @@
   font-size: 0.85rem;
 }
 
+@media screen and (max-width: 768px) {
+  .popUp-box {
+    top: 3.5rem;
+    right: 1rem;
+  }
+  .content-popUp {
+    width: 10rem;
+    font-size: 0.8rem;
+  }
+  .status-popUp {
+    font-size: 1.15rem;
+  }
+}
+
 .errorColor {
   color: rgb(244, 50, 89);
 }

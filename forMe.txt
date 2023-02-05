@@ -1,0 +1,1 @@
+Change the session.php line 281 when deploying the app => because of php 7 and codeIgniter 3 problems 

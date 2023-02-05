@@ -29,7 +29,7 @@ function setUpHider(hider) {
   resizeHider(hider);
   hider.addEventListener("click", () => {
     hider.style.opacity = 0;
-    // removeNavBar();
+    removeNavBar();
     removeMiddlePopUp();
     setTimeout(() => {
       document.body.removeChild(hider);
