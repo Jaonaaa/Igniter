@@ -8,9 +8,32 @@ $email = $this->session->userdata('login');
   <div id="logo-page">
       <img src="<?php echo base_url();?>assets/img/logo/logo.png" alt="logo " />
     </div>
-    <div id="root" style="font-size:3rem;justify-content:center;display:flex;align-items:center;height:30rem;">
-     Tongasoa 
+    <div id="navbar-top">
+      <div class="navbar-token">Add Product</div>
+        <div class="navbar-token token-on">Vetements</div>
+        <div class="input-search">
+          <input type="text" name="search-bar" placeholder="Placeholder .." id="search-bar">
+          <button> <i class="fas fa-search" id="btn-search"></i> </button>
+        </div>
+      </div>
+      <div id="category-tube">
+        <div class="category-token">Livre</div>
+        <div class="category-token">Livre</div>
+        <div class="category-token">Livre</div>
+      </div>
+    <div id="root" >
+
+
+        
+
+      </div>
     </div>
+
+  
+
+    </div>
+
+
 
 <?php 
     $this->load->view('Footer');

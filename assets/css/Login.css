@@ -19,14 +19,20 @@ body::-webkit-scrollbar {
   align-self: center;
   position: absolute;
   left: 50%;
-  top: 50%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   transform-style: preserve-3d;
   perspective: 1000px;
   transition: all 0.2s ease-in-out;
   box-shadow: 1px 2px 1rem 0px rgb(106 106 106 / 16%);
-  min-height: 85%;
+  min-height: 38rem;
   flex-wrap: nowrap;
-  transform: translateX(-50%) translateY(-50%);
+
+  top: 22%;
+  transform: translateX(-50%) translateY(-15%);
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 .left-block {
   width: 30rem;
@@ -84,6 +90,11 @@ form {
   .left-block {
     width: 0;
   }
+  .container {
+    min-height: 36rem;
+    top: 24%;
+    transform: translateX(-50%) translateY(-15%);
+  }
 }
 @media screen and (max-width: 700px) {
   .right-block {
@@ -100,11 +111,17 @@ form {
   .right-block {
     width: 22rem;
   }
+  .container {
+    min-height: 36rem;
+    top: 24%;
+    transform: translateX(-50%) translateY(-15%);
+  }
 }
 @media screen and (max-width: 780px) {
   .container {
-    height: 75%;
-    transform: translateX(-50%) translateY(-52%);
+    min-height: 36rem;
+    top: 24%;
+    transform: translateX(-50%) translateY(-15%);
   }
 }
 /* //////////////////////////////////////////////////////////////// */
@@ -208,7 +225,7 @@ input:focus ~ .placeholder {
 }
 .button {
   display: flex;
-  width: 36%;
+  width: 33%;
   border-radius: 1.5rem;
   overflow: hidden;
   align-self: center;
@@ -222,7 +239,7 @@ input:focus ~ .placeholder {
   font-family: Poppins;
 
   cursor: pointer;
-  padding: 0.8rem 0.5rem;
+  padding: 0.7rem 0.4rem;
   letter-spacing: 0.1rem;
   background-color: rgb(255, 121, 121);
   transition: background-color 0.2s ease-in-out;
@@ -268,4 +285,13 @@ input:focus ~ .placeholder {
   border-radius: 50%;
 
   position: fixed;
+}
+#slogan {
+  font-size: 1.8rem;
+  font-family: Dancing;
+  width: 100%;
+  position: absolute;
+  top: 13%;
+  text-align: center;
+  color: rgba(248, 69, 69, 0.811);
 }

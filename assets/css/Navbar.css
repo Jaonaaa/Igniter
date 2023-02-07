@@ -148,3 +148,41 @@ body::-webkit-scrollbar {
   background-color: rgb(0, 135, 156);
   width: 3px;
 }
+
+@media screen and (max-width: 708px) {
+  #navbar {
+    width: 18rem;
+  }
+  .logoNavbar {
+    width: 8rem;
+    height: 9rem;
+    margin: 0.5rem auto;
+    margin-top: -1rem;
+  }
+  .titleSection_Navbar {
+    font-size: 0.95rem;
+  }
+
+  .row {
+    max-width: 100%;
+    height: 3rem;
+    font-size: 0.9rem;
+    padding-left: 2rem;
+  }
+
+  .itemLink {
+    height: 3.4rem;
+  }
+
+  .iconItemLink i {
+    font-size: 1.1rem;
+  }
+  .nameItemLink {
+    font-size: 0.93rem;
+  }
+
+  .under_link {
+    height: 2.8rem;
+    font-size: 0.81rem;
+  }
+}

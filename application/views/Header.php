@@ -15,6 +15,14 @@ $this->load->helper("url"); // $this->session->unset_userdata('login');
     />
     <link
       rel="stylesheet"
+      href="<?php echo base_url();?>/assets/css/TopNavbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?php echo base_url();?>/assets/css/Footer.css"
+    />
+    <link
+      rel="stylesheet"
       href="<?php echo base_url();?>/assets/css/Home.css"
     />
     <link
@@ -24,6 +32,18 @@ $this->load->helper("url"); // $this->session->unset_userdata('login');
     <link
       rel="stylesheet"
       href="<?php echo base_url();?>assets/css/PopUp.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?php echo base_url();?>assets/css/Upload.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?php echo base_url();?>assets/css/Bag.css"
+    />
+    <link
+      rel="stylesheet"
+      href="<?php echo base_url();?>assets/css/Exchange.css"
     />
   </head>
 </html>

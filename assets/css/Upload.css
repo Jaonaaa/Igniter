@@ -1,0 +1,110 @@
+input[type="file"] {
+  display: none;
+}
+
+.add-product-box {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-add {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.block-add {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.block-add button {
+  background-color: orange;
+  align-self: center;
+  cursor: pointer;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.13rem;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+}
+.block-add button:hover {
+  background-color: rgb(255, 98, 0);
+}
+.label-block {
+  font-size: 1rem;
+  color: rgb(76, 74, 74);
+  margin-bottom: 0.4rem;
+}
+.input input {
+  width: 20rem;
+  padding: 0.7em 0.3rem;
+  outline: none;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  border: 1px solid rgba(128, 128, 128, 0.662);
+}
+.select select {
+  width: 15rem;
+  padding: 0.7em 0.5rem 0.7rem 0.3rem;
+  outline: none;
+  font-size: 0.85rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(128, 128, 128, 0.662);
+}
+.label-file-add {
+  width: 10rem;
+  align-self: center;
+  background-color: orange;
+  padding: 0.6rem 0.5rem;
+  border-radius: 0.3rem;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.label-file-add:hover {
+  background-color: rgb(255, 98, 0);
+}
+
+.label-file-add i {
+  margin-left: 0.5rem;
+}
+
+.blocks-picture {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.picture-square {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picture-square img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .input input {
+    width: 16rem;
+  }
+  .block-add {
+    padding: 1rem 0;
+  }
+}

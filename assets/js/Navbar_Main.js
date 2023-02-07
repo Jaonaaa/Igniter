@@ -4,6 +4,30 @@ let datas = [
   { type: "logo", src: `${base_url}assets/img/logo/logo.png` },
   { type: "titleSection", name: "Main Menu" },
   {
+    type: "singleLink",
+    name: "Feed",
+    link: "listProduct",
+    icon: "fas fa-book-open",
+  },
+  {
+    type: "singleLink",
+    name: "Add Product",
+    link: "addingProduct",
+    icon: "fas fa-clone",
+  },
+  {
+    type: "singleLink",
+    name: "My Products",
+    link: "showMyProducts",
+    icon: "fas fa-box-open",
+  },
+  {
+    type: "singleLink",
+    name: "Notification",
+    link: "exchangeList",
+    icon: "fas fa-bell",
+  },
+  {
     type: "multiLink",
     name: "Zayyy",
     icon: "fas fa-fire",
@@ -67,6 +91,36 @@ function setFunction(functionName) {
   if (functionName == "deco") {
     // getMyBasket();
     window.location = base_url + "index.php/Login/deconnexion";
+  }
+  if (functionName == "listProduct") {
+    addSection(
+      cardList(""),
+      "News Feed",
+      "There are some stuff that you would like ; )"
+    );
+    setUpExchangeListProduct();
+    setUpCards();
+  }
+  if (functionName == "addingProduct") {
+    addSection(
+      getFormAddProduct(),
+      "Form ",
+      "Add your product to exchange here"
+    );
+  }
+  if (functionName == "exchangeList") {
+    addSection(
+      getExchange(""),
+      "Exchange Place",
+      "Here you can see who want to exchange with you"
+    );
+  }
+  if (functionName == "showMyProducts") {
+    addSection(
+      myCards(""),
+      "Your Products",
+      "Here you can see the product that you have set"
+    );
   }
 }
 ///

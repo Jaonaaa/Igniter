@@ -1,0 +1,239 @@
+.exchange-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin: 0.6rem 0;
+  max-width: 45rem;
+  transition: all 0.2s ease-in-out;
+}
+.block-exchange {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  height: 17rem;
+  cursor: pointer;
+  box-shadow: 0px 2px 0.2rem 0px rgb(111 111 111 / 32%);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+}
+.block-exchange:hover {
+  box-shadow: 0px 2px 0.2rem 0px rgba(64, 165, 100, 0.52);
+}
+.picture-exchange {
+  width: 15rem;
+  height: 15rem;
+  transition: all 0.2s ease-in-out;
+}
+.picture-exchange img {
+  width: 100%;
+  height: 100%;
+}
+.contract-exchange {
+  display: flex;
+  min-width: 40rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.content-exchange {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+.about-product-exchange {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 0.5rem;
+  box-sizing: border-box;
+}
+.title-exchange {
+  font-size: 0.9rem;
+  color: grey;
+}
+.exchange-cross {
+  height: 100%;
+  position: relative;
+  min-width: 3rem;
+  width: 12%;
+  transition: all 0.2s ease-in-out;
+}
+.exchange-cross .arrow-right {
+  position: absolute;
+  width: 90%;
+  transition: all 0.2s ease-in-out;
+  height: 0.2rem;
+  background-color: rgb(255, 127, 127);
+  left: 10%;
+  border-radius: 0 0.2rem 0.2rem 0;
+  top: 5rem;
+}
+
+.arrow-right::before {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 1rem;
+  background-color: rgb(255, 127, 127);
+  right: 2%;
+  top: -0.1rem;
+  transform: rotate(50deg);
+}
+
+.arrow-right::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 0.88rem;
+  background-color: rgb(255, 127, 127);
+  right: 2.5%;
+  transform: rotate(-40deg);
+  top: -0.7rem;
+}
+
+.exchange-cross .arrow-left {
+  position: absolute;
+  width: 90%;
+  transition: all 0.2s ease-in-out;
+
+  height: 0.2rem;
+  background-color: rgb(255, 127, 127);
+  left: 10%;
+  border-radius: 0 0.2rem 0.2rem 0;
+  top: 10rem;
+}
+
+.arrow-left::before {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 1rem;
+  background-color: rgb(255, 127, 127);
+  left: 2%;
+  top: -0.1rem;
+  transform: rotate(-50deg);
+}
+
+.arrow-left::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 0.88rem;
+  background-color: rgb(255, 127, 127);
+  left: 2.5%;
+  transform: rotate(40deg);
+  top: -0.7rem;
+}
+.requester-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.name-requester {
+  font-size: 1.15rem;
+  padding-left: 3%;
+  color: rgb(57, 57, 57);
+}
+.buttons-exchange {
+  margin-top: 0.6rem;
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+  box-sizing: border-box;
+  display: flex;
+}
+.btn-exchange {
+  background-color: rgb(148, 106, 106);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.2rem;
+}
+.stop {
+  background-color: rgb(255, 53, 53);
+  margin-left: auto;
+  margin-right: 0.6rem;
+  transition: all 0.2s ease-in-out;
+}
+.accept {
+  background-color: rgb(2, 193, 2);
+}
+.stop:hover {
+  background-color: red;
+}
+.accept:hover {
+  background-color: rgb(31, 141, 0);
+}
+
+@media screen and (max-width: 968px) {
+  .contract-exchange {
+    min-width: 35rem;
+  }
+  .block-exchange {
+    height: 15rem;
+  }
+  .picture-exchange {
+    width: 13rem;
+  }
+  .title-exchange {
+    font-size: 0.8rem;
+  }
+  .upper-text {
+    font-size: 0.75rem;
+  }
+  .under-text {
+    font-size: 0.79rem;
+  }
+  .btn-exchange {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contract-exchange {
+    min-width: 20rem;
+  }
+  .block-exchange {
+    height: 12rem;
+  }
+  .picture-exchange {
+    width: 10rem;
+  }
+  .title-exchange {
+    font-size: 0.74rem;
+  }
+  .upper-text {
+    font-size: 0.69rem;
+  }
+  .under-text {
+    font-size: 0.68rem;
+  }
+  .btn-exchange {
+    font-size: 0.72rem;
+  }
+  .exchange-box {
+    padding: 0.5rem;
+    margin: 0.6rem auto;
+  }
+}
+
+@media screen and (max-width: 608px) {
+  .picture-exchange {
+    width: 9rem;
+  }
+  .block-exchange {
+    height: 11rem;
+  }
+  .title-exchange {
+    font-size: 0.7rem;
+  }
+  .upper-text {
+    font-size: 0.65rem;
+  }
+  .under-text {
+    font-size: 0.64rem;
+  }
+  .btn-exchange {
+    font-size: 0.68rem;
+  }
+}

@@ -29,16 +29,25 @@ $this->load->helper("url"); ?>
         font-family: Poppins;
         src: url("<?php echo base_url();?>assets/font/Poppins/Poppins-Light.ttf");
       }
+      @font-face {
+        font-family: Dancing;
+        src: url("<?php echo base_url();?>assets/font/DancingScript-Regular.ttf");
+      }
+      
       
 .left-block {
  
-  background-image: url(<?php echo base_url();?>assets/img/illu.jpg);
+  background-image: url(<?php echo base_url();?>assets/img/admin/6.png);
   
 }
     </style>
     <div id="root">
       <div class="container">
-        <div class="left-block"></div>
+        <div class="left-block">
+          <div id="slogan">
+            Experience the power of exchange <br> Trade smarter , live better
+          </div>
+        </div>
         <div class="right-block" id="right">
           <div id="first-glass"></div>
           <div id="second-glass"></div>

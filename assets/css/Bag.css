@@ -1,0 +1,140 @@
+#container-bag-product {
+  position: fixed;
+  bottom: 0.1rem;
+  height: 15rem;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+  width: 99%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  box-shadow: 0px 0px 0.3rem 0 rgb(172, 172, 172);
+}
+.title-bag {
+  font-size: 1rem;
+  color: grey;
+  margin-top: 0.5rem;
+  margin-left: 1%;
+}
+#button-validation-exchange {
+  position: absolute;
+  right: 3%;
+  padding: 0.6rem 0.55rem;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  top: -2rem;
+  box-shadow: 0px 0px 0.3rem 0 rgb(172, 172, 172);
+}
+
+#button-validation-close {
+  position: absolute;
+  right: 14%;
+  padding: 0.5rem 0.67rem;
+  background-color: rgb(65, 90, 255);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.4rem;
+  border-radius: 0.2rem;
+  top: -2rem;
+  box-shadow: 0px 0px 0.3rem 0 rgb(172, 172, 172);
+}
+#button-validation-close:hover {
+  background-color: rgb(124, 124, 255);
+}
+#row-bag {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card-bag {
+  width: 23rem;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 0.3rem 0 rgb(204, 255, 251);
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  display: flex;
+  min-width: 20rem;
+  transition: all 0.1s ease-in-out;
+  height: 77%;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.card-bag:hover {
+  box-shadow: 0px 0px 0.3rem 0 rgb(109, 196, 189);
+}
+.picture-card-bag {
+  height: 100%;
+  width: 69%;
+}
+.picture-card-bag img {
+  width: 100%;
+  height: 100%;
+}
+.row-bag::-webkit-scrollbar {
+  display: none;
+}
+.about-card-bag {
+  width: 31%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#button-validation-exchange:hover {
+  background-color: rgb(255, 98, 0);
+}
+.block-bag {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+}
+.label-bag-card {
+  font-size: 0.9rem;
+  color: rgb(51, 51, 51);
+  width: 100%;
+}
+.content-bag-card {
+  font-size: 0.86rem;
+  color: grey;
+}
+@media screen and (max-width: 968px) {
+  .title-bag {
+    font-size: 0.9rem;
+  }
+  #button-validation-exchange {
+    top: -1.85rem;
+    font-size: 1rem;
+  }
+  #button-validation-close {
+    right: 28%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-bag {
+    font-size: 0.8rem;
+  }
+  #button-validation-exchange {
+    top: -1.65rem;
+    font-size: 0.9rem;
+  }
+  #button-validation-close {
+    right: 31%;
+  }
+}

@@ -1,0 +1,154 @@
+#footer {
+  width: 100%;
+  margin-top: 3rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(0, 152, 51, 0.457); */
+}
+.logo-footer {
+  align-self: center;
+  height: 5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-footer img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.text-row-footer {
+  display: flex;
+  margin: 0.8rem auto;
+  width: 100%;
+  font-size: 1.1rem;
+  color: rgb(247, 105, 105);
+  justify-content: center;
+  align-items: center;
+}
+
+.users-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.3rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  min-width: 25rem;
+  height: 11rem;
+  border-radius: 2rem 0 20% 0;
+  overflow: hidden;
+  margin: 1rem 1rem;
+  shape-rendering: optimizeSpeed;
+  box-shadow: 0px 1px 0.2rem 0px rgba(111, 111, 111, 0.638);
+}
+
+.user-card img {
+  float: left;
+  width: 10rem;
+  /* shape-outside: margin-box; */
+  min-height: 10rem;
+  margin: -4% 0.5rem 2rem -4%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.user-card .name-user {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  color: rgb(94, 93, 93);
+  padding-top: 0.5rem;
+}
+
+.about-subtitle {
+  margin-top: 0.7rem;
+  color: grey;
+  width: 70%;
+  font-size: 0.89rem;
+}
+
+.about-content {
+  color: rgb(241, 149, 149);
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 968px) {
+  .logo-footer {
+    height: 4rem;
+  }
+  .logo-footer img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .text-row-footer {
+    margin: 0.8rem auto;
+    font-size: 0.94rem;
+  }
+  .user-card {
+    min-width: 22rem;
+    height: 11rem;
+  }
+  .user-card img {
+    width: 10rem;
+    min-height: 10rem;
+    margin: -3% 0.5rem 0 -4%;
+  }
+
+  .user-card .name-user {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+  .about-subtitle {
+    margin-top: 0.4rem;
+    font-size: 0.74rem;
+  }
+  .about-content {
+    font-size: 0.68rem;
+  }
+  #footer {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo-footer {
+    height: 3rem;
+  }
+  .logo-footer img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .text-row-footer {
+    margin: 0.7rem auto;
+    font-size: 0.8rem;
+  }
+  .user-card {
+    min-width: 18rem;
+    height: 8rem;
+  }
+  .user-card img {
+    width: 7.5rem;
+    min-height: 7.5rem;
+    margin: -2% 0.5rem 0 -5%;
+  }
+  .user-card .name-user {
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+  .about-subtitle {
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+  }
+  .about-content {
+    font-size: 0.61rem;
+  }
+  #footer {
+    margin-top: 1.2rem;
+  }
+}
