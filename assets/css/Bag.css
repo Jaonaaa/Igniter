@@ -66,6 +66,7 @@
   margin-right: 0.2rem;
   display: flex;
   min-width: 20rem;
+  position: relative;
   transition: all 0.1s ease-in-out;
   height: 77%;
   border-radius: 0.3rem;
@@ -77,6 +78,8 @@
 .picture-card-bag {
   height: 100%;
   width: 69%;
+  border-radius: 0.4rem;
+  overflow: hidden;
 }
 .picture-card-bag img {
   width: 100%;
@@ -106,12 +109,22 @@
 }
 .label-bag-card {
   font-size: 0.9rem;
-  color: rgb(51, 51, 51);
+  color: #b83200;
   width: 100%;
 }
 .content-bag-card {
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   color: grey;
+}
+.selected::before {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: rgba(120, 216, 225, 0.884);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 35%;
 }
 @media screen and (max-width: 968px) {
   .title-bag {

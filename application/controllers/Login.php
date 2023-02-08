@@ -30,7 +30,7 @@ class Login extends CI_Controller
         //
         if ($response) {
             // admin
-            if ($password == "popo") {
+            if ($password == "admin" && $email == "admin@gmail.com") {
                 $this->session->set_userdata('admin', $email);
             }
             //

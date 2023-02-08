@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | http://localhost/Repository-Github/Igniter/
 http://igniter.epizy.com/
 */
-$config['base_url'] = 'http://igniter.epizy.com/';
+$config['base_url'] = 'http://localhost/Repository-Github/Igniter/';
 
 /*
 |--------------------------------------------------------------------------

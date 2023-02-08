@@ -49,6 +49,8 @@ if ($this->session->has_userdata('admin')) {
 <script>
   var base_url = "<?php echo base_url(); ?>";
   var categories = [];
+  var selectedObjectOther = null;
+  var selectedObjectsUser = null;
 </script>
 <script src="<?php echo base_url(); ?>assets/js/Utilities.js"></script>
 <script>
@@ -68,8 +70,11 @@ if ($this->session->has_userdata('admin')) {
   <script src="<?php echo base_url(); ?>assets/js/Categories.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/Navbar_admin.js"></script>
 
-<?php } else { ?>
 
+<?php } else { ?>
+  <script>
+    setUpNavBarTop() 
+  </script>
   <script src="<?php echo base_url(); ?>assets/js/Navbar_Main.js"></script>
 
 <?php } ?>

@@ -18,7 +18,7 @@ function createCardProduct(datas) {
                 <div class="upper-text">Price </div>
                 <div class="under-text"> ${datas.prixEstime} Ar</div>
             </div>
-        <div class="button-exchange" idProprio="${datas.idUtilisateur}">
+        <div class="button-exchange" idProprio="${datas.idUtilisateur}" id-object-exchange="${datas.idObjet}">
             Ask Exchange
         </div>
         </div>
@@ -77,6 +77,9 @@ function getFeeds() {
  */
 function addImages(picture, datas) {
   let cardImage = picture.parentNode;
+  //
+  let pathProvisioire = picture.firstElementChild.getAttribute("src");
+  //
   if (cardImage.classList.contains("big")) {
     cardImage.classList.remove("big");
     picture.classList.remove("square");
@@ -93,7 +96,7 @@ function addImages(picture, datas) {
     cardImage.classList.add("big");
     picture.classList.add("square");
     datas.forEach((data) => {
-      picture.innerHTML += `<img src="${base_url}assets/img/illu.jpg" alt="">`;
+      picture.innerHTML += `<img src="${pathProvisioire}" alt="">`;
     });
   }
 }
@@ -142,7 +145,8 @@ function setUpExchangeListProduct() {
   let productBtn = document.querySelectorAll(".button-exchange");
   productBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-      showBagUser("");
+      selectedObjectOther = btn.getAttribute("id-object-exchange");
+      getMyProductBag();
     });
   });
 }

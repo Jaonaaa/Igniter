@@ -75,11 +75,7 @@ function setFunction(functionName) {
     window.location = base_url + "index.php/Login/deconnexion";
   }
   if (functionName == "alterCategories") {
-    addSection(
-      getCategories(""),
-      "Categories",
-      "Here you can create or arrange categories"
-    );
+    getCategoriesSection();
   }
 }
 ///

@@ -12,6 +12,12 @@ class Modele_takalo extends CI_Model
         $sql = sprintf($sql, $this->db->escape($email), $this->db->escape($motdepasse), $this->db->escape($nom));
         $this->db->query($sql);
     }
+    public function insert_category($nom)
+    {
+        $sql = "INSERT INTO `categorie`( `nomCategorie`) VALUES (%s)";
+        $sql = sprintf($sql, $this->db->escape($nom));
+        $this->db->query($sql);
+    }
 
     public function check_inscription($email, $motdepasse)
     {

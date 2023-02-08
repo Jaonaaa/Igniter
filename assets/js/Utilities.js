@@ -140,3 +140,13 @@ function setUpCategoryTubes(datas) {
     tube.innerHTML += `<div class="category-token" idCategory="${data.id}">${data.nom}</div>`;
   });
 }
+function setUpNavBarTop() {
+  let addProductBtn = document.getElementById("addProduct-token");
+  let myProductBtn = document.getElementById("myProduct-token");
+  addProductBtn.addEventListener("click", () => {
+    getAddForm();
+  });
+  myProductBtn.addEventListener("click", () => {
+    getMyProducts();
+  });
+}

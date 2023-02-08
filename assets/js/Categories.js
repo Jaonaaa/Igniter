@@ -1,10 +1,17 @@
-function createRowCategories(datas) {
+function createRowCategories() {
+  let blocks = () => {
+    let content = "";
+    categories.forEach((data) => {
+      content += `  <div class="block-category">
+      ${data.nom}
+    </div>`;
+    });
+    return content;
+  };
   let content = ` 
   <div class="subtitle-row-categories">Categories that exist </div>
   <div class="row-category">
-    <div class="block-category">
-        Clothes
-    </div>
+    ${blocks()}
   </div>
 
   </div>
@@ -16,7 +23,7 @@ function createAddCategories() {
   let content = ` 
     <div class="subtitle-row-categories">Create new Category </div>
     <div class="row-category">
-      <div class="block-category add">
+      <div class="block-category add" id="btn-add-category">
           Add new Category <i class="fas fa-plus"></i>
       </div>
     </div>
@@ -24,14 +31,62 @@ function createAddCategories() {
   return content;
 }
 
-function getCategories(datas) {
-  let blocks = createRowCategories(datas);
+function getCategories() {
+  let blocks = createRowCategories();
   blocks += createAddCategories();
   return blocks;
 }
 
-addSection(
-  getCategories(""),
-  "Categories",
-  "Here you can create or arrange categories"
-);
+function getCategoriesSection() {
+  addSection(
+    getCategories(""),
+    "Categories",
+    "Here you can create or arrange categories"
+  );
+  setUpAddCategories();
+}
+
+function setUpAddCategories() {
+  let btn = document.getElementById("btn-add-category");
+  btn.addEventListener("click", () => {
+    let champ = document.getElementById("new-category");
+    if (champ == null) {
+      let row = document.querySelector(".row-category");
+      row.innerHTML += ` <div class="block-category new"> 
+        <input type="text" placeholder="Type here" id="new-category" />
+      <button id="btn-add-category-accept"> <i class="fas fa-plus"></i> </button></div>`;
+      //
+      let input = document.getElementById("new-category");
+      let btnAccept = document.getElementById("btn-add-category-accept");
+      btnAccept.addEventListener("click", () => {
+        let inputValue = input.value;
+        input.setAttribute("disabled", "");
+      });
+    }
+  });
+}
+
+function addNewCategory(nom) {
+  let xhr = getTheBoy();
+  let formData = new FormData();
+  formData.append("nameCategory", nom);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        var retour = JSON.parse(xhr.responseText);
+        if (retour.status == "error") {
+        } else {
+          categories = retour;
+          setUpCategoryTubes(categories);
+        }
+      } else {
+        console.log(xhr.status);
+      }
+    }
+  };
+  xhr.addEventListener("error", function (event) {
+    alert("Oups! Quelque chose s'est mal passé lors de la publication .");
+  });
+  xhr.open("GET", `${base_url}index.php/Home/addCategory`, true);
+  xhr.send(formData);
+}

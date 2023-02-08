@@ -1,7 +1,10 @@
 <?php
 $this->load->view('Header');
 $user = $this->session->userdata('user');
-// var_dump($this->session->userdata("pathPics"));
+$admin = false;
+if ($this->session->has_userdata('admin')) {
+  $admin = true;
+}
 ?>
 
 <body>
@@ -12,8 +15,11 @@ $user = $this->session->userdata('user');
     <img src="<?php echo base_url(); ?>assets/img/logo/logo.png" alt="logo " />
   </div>
   <div id="navbar-top">
-    <div class="navbar-token">Add Product</div>
-    <div class="navbar-token token-on">My Product</div>
+    <?php if (!$admin) { ?>
+      <div class="navbar-token" id="addProduct-token">Add Product</div>
+      <div class="navbar-token " id="myProduct-token">My Product</div>
+    <?php } ?>
+
     <div class="input-search">
       <input type="text" name="search-bar" placeholder="Placeholder .." id="search-bar">
       <button> <i class="fas fa-search" id="btn-search"></i> </button>
