@@ -61,6 +61,8 @@ function setUpAddCategories() {
       btnAccept.addEventListener("click", () => {
         let inputValue = input.value;
         input.setAttribute("disabled", "");
+        input.style.border = "none";
+        addNewCategory(inputValue);
       });
     }
   });
