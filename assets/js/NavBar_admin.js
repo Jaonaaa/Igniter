@@ -5,28 +5,11 @@ let datas = [
   { type: "titleSection", name: "Main Menu" },
   {
     type: "singleLink",
-    name: "Feed",
-    link: "listProduct",
+    name: "Categories",
+    link: "alterCategories",
     icon: "fas fa-book-open",
   },
-  {
-    type: "singleLink",
-    name: "Add Product",
-    link: "addingProduct",
-    icon: "fas fa-clone",
-  },
-  {
-    type: "singleLink",
-    name: "My Products",
-    link: "showMyProducts",
-    icon: "fas fa-box-open",
-  },
-  {
-    type: "singleLink",
-    name: "Notification",
-    link: "exchangeList",
-    icon: "fas fa-bell",
-  },
+
   {
     type: "multiLink",
     name: "Zayyy",
@@ -89,24 +72,14 @@ function setUpLinkedList() {
 ///adding specific function to The navbar
 function setFunction(functionName) {
   if (functionName == "deco") {
-    // getMyBasket();
     window.location = base_url + "index.php/Login/deconnexion";
   }
-  if (functionName == "listProduct") {
-    getFeeds();
-  }
-  if (functionName == "addingProduct") {
-    getAddForm();
-  }
-  if (functionName == "exchangeList") {
+  if (functionName == "alterCategories") {
     addSection(
-      getExchange(""),
-      "Exchange Place",
-      "Here you can see who want to exchange with you"
+      getCategories(""),
+      "Categories",
+      "Here you can create or arrange categories"
     );
-  }
-  if (functionName == "showMyProducts") {
-    getMyProducts();
   }
 }
 ///

@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 $this->load->helper("url"); // $this->session->unset_userdata('login');
+$admin = false ;
+if( $this->session->has_userdata('admin'))
+{
+  $admin = true;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +50,14 @@ $this->load->helper("url"); // $this->session->unset_userdata('login');
       rel="stylesheet"
       href="<?php echo base_url();?>assets/css/Exchange.css"
     />
+    <!-- Admin -->
+    <?php if($admin) { ?>
+    <link
+      rel="stylesheet"
+      href="<?php echo base_url();?>assets/css/Categories.css"
+    />
+    <?php } ?>
+    
   </head>
 </html>
 <style>

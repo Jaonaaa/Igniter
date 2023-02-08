@@ -8,9 +8,9 @@ let loginForm = `
 <img src="${base_url}assets/img/logo/logo.png" alt="logo">
 </div>
 <div class="logo-subtitle">Log into your account</div>
-<form action="./index.php/Login/LoginUser" method="post" id="formulaire-sign-in">
+<form action="${base_url}index.php/Login/LoginUser" method="post" id="formulaire-sign-in">
   <div class="input">
-    <input type="email" required name="email" id="emailInput" />
+    <input type="email" required name="email" id="emailInput" value="${wrongUsername}" />
     <div class="placeholder">Email</div>
   </div>
   <div class="input">
@@ -33,7 +33,7 @@ let signUpForm = `
 <img src="${base_url}assets/img/logo/logo.png" alt="logo">
 </div>
 <div class="logo-subtitle">Create your account</div>
-<form action="${base_url}" method="post" id="formulaire-sign-up">
+<form action="${base_url}index.php/Login/signUp" method="post" id="formulaire-sign-up">
   <div class="input">
     <input type="text" required name="username" id="username" />
     <div class="placeholder">Username</div>
@@ -152,5 +152,15 @@ function initialisation(content) {
   let firstGlass = document.getElementById("first-glass");
   firstGlass.innerHTML = content;
   setUpLoginForm();
+  focused();
+
   holdInput();
+}
+
+function focused() {
+  console.log("Hello");
+  let emailInput = document.getElementById("emailInput");
+  if (emailInput.value + "".trim() != "") {
+    emailInput.setAttribute("autofocus", "true");
+  }
 }

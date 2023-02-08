@@ -1,6 +1,12 @@
+// auto
+//
+
 function holdInput() {
   let inputs = Array.from(document.querySelectorAll(".input"));
   inputs.forEach((input) => {
+    if (input.firstElementChild.value + "".trim() != "") {
+      input.children[1].classList.add("holdOn");
+    }
     input.firstElementChild.addEventListener("blur", () => {
       let textInput = input.firstElementChild.value + "";
       let placeholder = input.children[1];
@@ -102,4 +108,35 @@ function addSection(content, title, about) {
       sections[1].parentNode.removeChild(sections[1]);
     }, 1000);
   }
+}
+
+function getAllCategories() {
+  let xhr = getTheBoy();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        var retour = JSON.parse(xhr.responseText);
+        if (retour.status == "error") {
+        } else {
+          categories = retour;
+          setUpCategoryTubes(categories);
+        }
+      } else {
+        console.log(xhr.status);
+      }
+    }
+  };
+  xhr.addEventListener("error", function (event) {
+    alert("Oups! Quelque chose s'est mal passé lors de la publication .");
+  });
+  xhr.open("GET", `${base_url}index.php/Home/getCategories`, true);
+  xhr.send(null);
+}
+
+function setUpCategoryTubes(datas) {
+  let tube = document.getElementById("category-tube");
+  tube.innerHTML = "";
+  datas.forEach((data) => {
+    tube.innerHTML += `<div class="category-token" idCategory="${data.id}">${data.nom}</div>`;
+  });
 }

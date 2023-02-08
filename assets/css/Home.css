@@ -228,6 +228,16 @@ body {
   width: 18rem;
   height: 18rem;
 }
+#user {
+  position: fixed;
+  font-size: 1.3rem;
+  top: 0.6rem;
+  color: rgba(255, 92, 92, 0.97);
+  left: 3%;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid rgba(255, 92, 92, 0.97);
+}
 
 @media screen and (max-width: 968px) {
   .title-section-content {
@@ -262,6 +272,10 @@ body {
     margin: auto;
     font-size: 0.91rem;
   }
+  #user {
+    font-size: 1.1rem;
+    left: 5%;
+  }
 
   .big {
     width: 32rem;
@@ -284,15 +298,15 @@ body {
 }
 @media screen and (max-width: 768px) {
   #logo-page {
-    width: 7rem;
+    width: 6.5rem;
     height: 3rem;
-    top: 1rem;
-    right: 3%;
+    top: 1.7rem;
+    right: 7%;
   }
   #logo-page img {
-    width: 7.5rem;
-    height: 9rem;
-    top: -100%;
+    width: 7rem;
+    height: 8rem;
+    top: -80%;
   }
   .title-section-content {
     font-size: 1.6rem;
@@ -304,7 +318,7 @@ body {
     padding-left: 1.2rem;
   }
   .card-img {
-    min-width: 14rem;
+    min-width: 12rem;
     width: 15rem;
     height: 18rem;
     margin: 0.9rem 1.4rem;
@@ -349,6 +363,10 @@ body {
     width: 14rem;
     height: 14rem;
   }
+  #user {
+    font-size: 1rem;
+    left: 7%;
+  }
 }
 @media screen and (max-width: 708px) {
   .title-section-content {
@@ -358,7 +376,7 @@ body {
     font-size: 0.7rem;
   }
   .card-img {
-    width: 15rem;
+    width: 14.5rem;
     height: 18rem;
     margin: 1.3rem auto;
   }
@@ -376,7 +394,7 @@ body {
   }
 
   .big {
-    width: 25rem !important;
+    width: 24rem !important;
     height: 30rem !important;
   }
   .big .picture {
@@ -392,5 +410,12 @@ body {
   .square img {
     width: 9rem;
     height: 9rem;
+  }
+  .button-exchange {
+    font-size: 0.76rem;
+  }
+  #user {
+    font-size: 1rem;
+    left: 9%;
   }
 }

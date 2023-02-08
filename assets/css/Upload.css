@@ -88,8 +88,8 @@ input[type="file"] {
 }
 
 .picture-square {
-  width: 12rem;
-  height: 12rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
@@ -106,5 +106,15 @@ input[type="file"] {
   }
   .block-add {
     padding: 1rem 0;
+  }
+  .picture-square {
+    width: 9rem;
+    height: 9rem;
+  }
+  .blocks-picture {
+    margin: auto;
+  }
+  .col-add {
+    margin: auto;
   }
 }

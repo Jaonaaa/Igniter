@@ -1,3 +1,5 @@
+// geeting Feeds
+getFeeds();
 /**
  *
  * @param {Object} datas
@@ -6,17 +8,17 @@ function createCardProduct(datas) {
   let card = `
     <div class="card-img">
         <div class="picture">
-            <img src="${base_url}assets/img/illu.jpg" alt="">
+            <img src="${base_url}${datas.pathPic}" alt="">
     </div>
         <div class="card-about">
-            <div class="title-card">Harry Potter  <span class="author">  by Peter</span></div>
-            <div class="subtitle-card">This item  gfdsgfdfgf  dgs fdsgis cool</div>
+            <div class="title-card">${datas.nom}  <span class="author">  by ${datas.nomProprio}</span></div>
+            <div class="subtitle-card">${datas.description}</div>
         <div class="content-card">
             <div class="block-in">
                 <div class="upper-text">Price </div>
-                <div class="under-text"> 23.00 $</div>
+                <div class="under-text"> ${datas.prixEstime} Ar</div>
             </div>
-        <div class="button-exchange">
+        <div class="button-exchange" idProprio="${datas.idUtilisateur}">
             Ask Exchange
         </div>
         </div>
@@ -32,14 +34,42 @@ function createCardProduct(datas) {
  */
 function cardList(datas) {
   let cards = "";
-  //   datas.forEach((data) => {
-  //     cards += createCardProduct(data);
-  //   });
-  for (let index = 0; index < 4; index++) {
-    cards += createCardProduct("data");
-  }
+  datas.forEach((data) => {
+    cards += createCardProduct(data);
+  });
   return cards;
 }
+
+function getFeeds() {
+  let xhr = getTheBoy();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        var retour = JSON.parse(xhr.responseText);
+        console.log(retour);
+        if (retour.status == "error") {
+          createSidePopUp(retour.detail, "error");
+        } else {
+          addSection(
+            cardList(retour),
+            "News Feed",
+            "There are some stuff that you would like ; )"
+          );
+          setUpExchangeListProduct();
+          setUpCards();
+        }
+      } else {
+        console.log(xhr.status);
+      }
+    }
+  };
+  xhr.addEventListener("error", function (event) {
+    alert("Oups! Quelque chose s'est mal passé lors de la publication .");
+  });
+  xhr.open("GET", `${base_url}Home/getFeeds`, true);
+  xhr.send(null);
+}
+
 /**
  *
  * @param {HTMLElement} picture
@@ -87,7 +117,7 @@ function getOtherPicture(picture) {
         var retour = JSON.parse(xhr.responseText);
         // console.log(retour);
         if (retour.status == "error") {
-          console.log("Erreur");
+          createSidePopUp(retour.detail, "error");
         } else {
           //addImages(picture, retour);
         }
@@ -116,11 +146,3 @@ function setUpExchangeListProduct() {
     });
   });
 }
-////
-addSection(
-  cardList(""),
-  "News Feed",
-  "There are some stuff that you would like ; )"
-);
-setUpExchangeListProduct();
-setUpCards();
