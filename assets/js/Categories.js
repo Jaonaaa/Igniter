@@ -63,6 +63,11 @@ function setUpAddCategories() {
         input.setAttribute("disabled", "");
         input.style.border = "none";
         addNewCategory(inputValue);
+        let blockss = document.querySelector(".new");
+        blockss.classList.remove("new");
+        input.style.backgroundColor = "transparent";
+        input.style.color = "white";
+        btnAccept.parentNode.removeChild(btnAccept);
       });
     }
   });
@@ -78,8 +83,7 @@ function addNewCategory(nom) {
         var retour = JSON.parse(xhr.responseText);
         if (retour.status == "error") {
         } else {
-          categories = retour;
-          setUpCategoryTubes(categories);
+          createSidePopUp("Category " + nom + " added", "good");
         }
       } else {
         console.log(xhr.status);
@@ -89,6 +93,6 @@ function addNewCategory(nom) {
   xhr.addEventListener("error", function (event) {
     alert("Oups! Quelque chose s'est mal passé lors de la publication .");
   });
-  xhr.open("GET", `${base_url}index.php/Home/addCategory`, true);
+  xhr.open("POST", `${base_url}index.php/Home/addCategory`, true);
   xhr.send(formData);
 }

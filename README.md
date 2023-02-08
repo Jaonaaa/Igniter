@@ -4,6 +4,15 @@ ETU-001888
 
 Les requetes sql sont disponible dans le fichier sql.sql
 
+comptes disponibles:
+ADMIN:
+-email:admin@gmail.com password:admin
+
+    SIMPLE:
+        -email:paul@gmail.com       password:paul
+        -email:riana@gmail.com      password:riana
+        -email:tahiry@gmail.com     password:tahiry
+
 #Fonctionnalités (partie 1 sur 3)
 
 1. Backoffice(page admin)

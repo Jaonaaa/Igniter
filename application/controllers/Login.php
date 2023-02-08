@@ -19,17 +19,24 @@ class Login extends CI_Controller
         }
     }
 
-    public function loginUser()
+    public function loginUser($password = "", $email = "")
     {
         $this->load->helper('url');
         //
-        $email = $this->input->post('email');
-        $password = $this->input->post('password');
+        if ($email == "adminX") {
+            $email = "admin@gmail.com";
+        } else {
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+        }
+        //
+
         $this->load->model('Modele_takalo', 'user');
         $response = $this->user->check_login($email, $password);
         //
         if ($response) {
             // admin
+
             if ($password == "admin" && $email == "admin@gmail.com") {
                 $this->session->set_userdata('admin', $email);
             }
